@@ -1,0 +1,102 @@
+[gd_scene load_steps=15 format=3 uid="uid://c8sdwdsxdh0gv"]
+
+[ext_resource type="PackedScene" uid="uid://b1u6qtidllbob" path="res://3d/scar/source/weapon_scar.fbx" id="1_nvaiv"]
+[ext_resource type="Texture2D" uid="uid://cdlqnvh0a6i76" path="res://3d/scar/textures/DefaultMaterial_Base_Color.jpeg" id="2_gkjvq"]
+[ext_resource type="Texture2D" uid="uid://dpnh0mhamubj1" path="res://3d/scar/textures/arm_color.png" id="3_nct83"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_huetx"]
+albedo_texture = ExtResource("2_gkjvq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ckj34"]
+albedo_texture = ExtResource("2_gkjvq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obf02"]
+albedo_texture = ExtResource("2_gkjvq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ecfih"]
+albedo_texture = ExtResource("2_gkjvq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jb0kp"]
+albedo_texture = ExtResource("2_gkjvq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vcg67"]
+albedo_texture = ExtResource("2_gkjvq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uf0g7"]
+albedo_texture = ExtResource("3_nct83")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7rf14"]
+albedo_texture = ExtResource("3_nct83")
+
+[sub_resource type="Animation" id="Animation_5lpuy"]
+resource_name = "trigger"
+
+[sub_resource type="Animation" id="Animation_1nskd"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ir0ou"]
+_data = {
+"RESET": SubResource("Animation_1nskd"),
+"trigger": SubResource("Animation_5lpuy")
+}
+
+[node name="weapon_scar" instance=ExtResource("1_nvaiv")]
+
+[node name="base" parent="RootNode/scar" index="0"]
+material_override = SubResource("StandardMaterial3D_huetx")
+
+[node name="clip" parent="RootNode/scar" index="1"]
+transform = Transform3D(1, -7.45058e-09, 1.86264e-09, 7.45058e-09, 1, 3.72529e-09, -1.86264e-09, -3.72529e-09, 1, -5.96046e-10, 0.00123439, 3.0905e-06)
+material_override = SubResource("StandardMaterial3D_ckj34")
+
+[node name="bolt" parent="RootNode/scar" index="2"]
+material_override = SubResource("StandardMaterial3D_obf02")
+
+[node name="release" parent="RootNode/scar" index="3"]
+transform = Transform3D(1, 6.72205e-18, -9.55261e-32, -6.72205e-18, 1, -1.42109e-14, 0, 1.42109e-14, 1, -4.76837e-08, 1.71428e-07, 7.61449e-08)
+material_override = SubResource("StandardMaterial3D_ecfih")
+
+[node name="handle" parent="RootNode/scar" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.42109e-14, 0, 1.42109e-14, 1, 0, 3.09711e-07, -3.8147e-08)
+material_override = SubResource("StandardMaterial3D_jb0kp")
+
+[node name="trigger" parent="RootNode/scar" index="5"]
+material_override = SubResource("StandardMaterial3D_vcg67")
+
+[node name="Skeleton3D" parent="RootNode/Armature" index="0"]
+bones/1/rotation = Quaternion(-0.534057, 0.775731, 0.288578, 0.172473)
+bones/3/rotation = Quaternion(-0.154886, 0.159941, -1.93236e-07, 0.9749)
+bones/4/rotation = Quaternion(0.269773, 0.101802, -0.242649, 0.926272)
+bones/5/rotation = Quaternion(-0.0941413, 0.0826037, -0.141493, 0.981985)
+bones/6/rotation = Quaternion(-0.08146, -0.0117081, -0.0496799, 0.995369)
+bones/11/rotation = Quaternion(-0.0508387, -0.486174, 0.00289967, 0.872377)
+bones/12/rotation = Quaternion(-0.0315728, -0.142056, -0.00453345, 0.989345)
+bones/16/rotation = Quaternion(0.0911558, -0.509044, 0.402353, 0.755431)
+bones/17/rotation = Quaternion(0.0222788, -0.19479, 0.00442529, 0.980582)
+bones/18/rotation = Quaternion(-0.0118062, -0.221748, -0.000643805, 0.975032)
+bones/22/rotation = Quaternion(-0.462324, 0.882405, -0.0520558, 0.070052)
+bones/23/rotation = Quaternion(0.0322778, 0.828599, 0.0750105, 0.553855)
+bones/24/rotation = Quaternion(0.0504078, -0.190554, 0.0156931, 0.980256)
+bones/25/rotation = Quaternion(-0.00128611, -0.0406254, 0.0658077, 0.997004)
+bones/29/rotation = Quaternion(0.170841, 0.805585, 0.119053, 0.554683)
+bones/30/rotation = Quaternion(-0.0213519, -0.186443, -0.00310396, 0.982229)
+bones/35/rotation = Quaternion(0.615288, 0.508969, 0.560814, 0.218765)
+bones/37/rotation = Quaternion(-0.0159436, 0.0105163, -0.0304468, 0.999354)
+bones/40/rotation = Quaternion(0.0293444, 0.39039, 0.18251, 0.9019)
+bones/44/rotation = Quaternion(-0.0622319, -0.0736618, -0.405634, 0.908934)
+bones/45/rotation = Quaternion(-0.00278241, 0.440914, -0.0490549, 0.896203)
+bones/46/rotation = Quaternion(0.0410779, 0.400317, -0.00618616, 0.915435)
+bones/51/rotation = Quaternion(-0.0180749, 0.395026, -0.0121095, 0.918412)
+bones/58/rotation = Quaternion(0.0263358, 0.623976, -0.00525762, 0.780982)
+bones/64/rotation = Quaternion(0.0235835, 0.498404, -0.0298284, 0.866111)
+
+[node name="hands" parent="RootNode/Armature/Skeleton3D" index="0"]
+material_override = SubResource("StandardMaterial3D_uf0g7")
+
+[node name="arms" parent="RootNode/Armature/Skeleton3D" index="1"]
+material_override = SubResource("StandardMaterial3D_7rf14")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_ir0ou")
+}

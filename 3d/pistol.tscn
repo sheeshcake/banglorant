@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=3 uid="uid://c300r0yaw0gn4"]
+
+[ext_resource type="PackedScene" uid="uid://bkv1e43lji8ko" path="res://3d/pistol/source/weapon_m1911.fbx" id="1_skqqv"]
+[ext_resource type="Texture2D" uid="uid://cgc6hefphht0m" path="res://3d/pistol/textures/HIpistolColor.png" id="2_hbt1r"]
+[ext_resource type="Texture2D" uid="uid://c1ahwdnkoa1i5" path="res://3d/pistol/textures/arm_color.png" id="3_0pfym"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rj7nb"]
+albedo_texture = ExtResource("2_hbt1r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_niko2"]
+albedo_texture = ExtResource("2_hbt1r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_chgbl"]
+albedo_texture = ExtResource("2_hbt1r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c5jlh"]
+albedo_texture = ExtResource("2_hbt1r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qv4qq"]
+albedo_texture = ExtResource("2_hbt1r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6wfey"]
+albedo_texture = ExtResource("3_0pfym")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m65fo"]
+albedo_texture = ExtResource("3_0pfym")
+
+[node name="weapon_m1911" instance=ExtResource("1_skqqv")]
+
+[node name="trigger" parent="RootNode/HIpistol" index="0"]
+material_override = SubResource("StandardMaterial3D_rj7nb")
+
+[node name="slide" parent="RootNode/HIpistol" index="1"]
+material_override = SubResource("StandardMaterial3D_niko2")
+
+[node name="mag" parent="RootNode/HIpistol" index="2"]
+transform = Transform3D(1, 6.17744e-10, 4.65662e-09, 6.17744e-10, 0.965412, -0.26073, -4.65662e-09, 0.26073, 0.965412, -9.53674e-09, -0.00929882, -0.000634441)
+material_override = SubResource("StandardMaterial3D_chgbl")
+
+[node name="hammer" parent="RootNode/HIpistol" index="3"]
+material_override = SubResource("StandardMaterial3D_c5jlh")
+
+[node name="base" parent="RootNode/HIpistol" index="4"]
+material_override = SubResource("StandardMaterial3D_qv4qq")
+
+[node name="Skeleton3D" parent="RootNode/Armature" index="0"]
+bones/1/rotation = Quaternion(-0.445144, 0.811113, 0.330619, 0.186102)
+bones/2/rotation = Quaternion(0.610456, 0.202412, 0.212106, 0.735788)
+bones/3/rotation = Quaternion(-0.242706, 0.0117874, -1.00873e-07, 0.970028)
+bones/4/rotation = Quaternion(0.19413, 0.302929, -0.102059, 0.927433)
+bones/6/rotation = Quaternion(-0.0185607, 0.0143128, -0.0426959, 0.998813)
+bones/11/rotation = Quaternion(-0.0318124, -0.294622, 0.000444871, 0.955084)
+bones/14/rotation = Quaternion(0.0962453, -0.415964, 0.405279, 0.808369)
+bones/15/rotation = Quaternion(0.022019, -0.134928, 0.00577597, 0.990594)
+bones/16/rotation = Quaternion(-0.0149901, -0.295455, 0.0196733, 0.955037)
+bones/19/rotation = Quaternion(-0.402674, 0.911526, -0.0829806, -0.0093647)
+bones/20/rotation = Quaternion(0.0763604, 0.892893, 0.0241203, 0.443091)
+bones/21/rotation = Quaternion(0.0284259, -0.372611, 0.0632966, 0.92539)
+bones/22/rotation = Quaternion(0.00461561, -0.129855, 0.0655667, 0.989352)
+bones/25/rotation = Quaternion(0.283947, 0.787718, 0.0665337, 0.54263)
+bones/26/rotation = Quaternion(-0.0215389, -0.269719, -0.00126755, 0.962697)
+bones/27/rotation = Quaternion(0.0249661, -0.267041, 0.00692052, 0.963337)
+bones/30/rotation = Quaternion(0.619922, 0.702798, 0.34123, -0.073031)
+bones/31/rotation = Quaternion(0.459166, -0.217265, -0.136272, 0.850525)
+bones/32/rotation = Quaternion(-0.104158, -0.0556231, 1.02243e-07, 0.993004)
+bones/33/rotation = Quaternion(0.245475, -0.100745, 0.31387, 0.911635)
+bones/34/rotation = Quaternion(-0.21676, 0.109812, 0.0936026, 0.965502)
+bones/35/rotation = Quaternion(0.00239672, 0.424681, 0.11511, 0.897992)
+bones/39/rotation = Quaternion(0.0364854, 0.348259, -0.0370275, 0.935956)
+bones/40/rotation = Quaternion(-0.0116722, 0.58724, -0.00858447, 0.809283)
+bones/50/rotation = Quaternion(0.0258545, 0.554763, -0.00739582, 0.831574)
+bones/55/rotation = Quaternion(0.0172817, 0.636843, -0.0157537, 0.770638)
+bones/56/rotation = Quaternion(0.0254631, 0.35542, -0.00447767, 0.934349)
+
+[node name="hands" parent="RootNode/Armature/Skeleton3D" index="0"]
+material_override = SubResource("StandardMaterial3D_6wfey")
+
+[node name="arms" parent="RootNode/Armature/Skeleton3D" index="1"]
+material_override = SubResource("StandardMaterial3D_m65fo")
